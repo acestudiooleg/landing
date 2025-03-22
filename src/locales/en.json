@@ -1,0 +1,15 @@
+{
+  "mainPage": {
+    "marathon": "7 day marathon to create a game <bold>Battlecity</bold> on JavaScript",
+    "startDate": "Start {{date}}",
+    "places": "Only 4 places left",
+    "offer": {
+      "title": "<icon>🎮</icon> <text>Create your own game \"Battlecity\" in 7 days!</text>",
+      "description": "Immerse yourself in the world of nostalgia and learn how to create games in JavaScript. Two-player game, two levels"
+    },
+    "bonus": "<bold>After registration you will receive a BONUS:</bold> \n <text>Set of original sounds and sprites for the game</text>",
+    "price": "$15",
+    "oldPrice": "$100",
+    "join": "Join now"
+  }
+}

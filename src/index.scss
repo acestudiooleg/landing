@@ -3,5 +3,14 @@
 @tailwind utilities;
 
 body {
-  @apply bg-pagebg;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  @apply bg-pagebg max-w-[430px] mx-auto;
+  background-image: url('./assets/images/bg.png');
+  background-position: 50% 5%;
+  background-size:auto;
+}
+
+#root {
+  @apply text-[12px]
 }

@@ -1,8 +1,13 @@
-
 import './App.scss';
+import { MainPage } from './components/MainPage';
+import './i18n';
 
 function App() {
-  return <div className='bg-pagebg text-red-500'>hello world</div>;
+  return (
+    <div className="">
+      <MainPage />
+    </div>
+  );
 }
 
 export default App;
