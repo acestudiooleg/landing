@@ -9,6 +9,7 @@ body {
   background-image: url('./assets/images/bg.png');
   background-position: 50% 5%;
   background-size:auto;
+  box-sizing: content-box;
 }
 
 #root {

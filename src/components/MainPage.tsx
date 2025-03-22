@@ -8,7 +8,7 @@ export const MainPage = () => {
   //  x = 299 * 100 / 1999
   //  x = 100 - 14.96 = 85.04
   return (
-    <div>
+    <div className="relative">
       <section className="p-1">
         <div className="text-gray-200 text-[12px] px-1">
           <Trans
@@ -25,7 +25,7 @@ export const MainPage = () => {
           <div className="text-white font-semibold">{t("mainPage.places")}</div>
         </div>
       </section>
-      <section className=" relative">
+      <section className="relative h-[500px]">
         <div className="absolute w-full z-20 top-[15px] px-1 flex flex-col items-center">
           <h1 className="text-lg font-bold text-center z-10">
             <Trans
