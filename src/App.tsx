@@ -7,6 +7,8 @@ import { AuthorPage } from "./components/AuthorPage";
 import "./App.scss";
 import { FinalCTA } from "./components/FinalCTS";
 import { ParallaxTank } from "./components/ParallaxTank";
+import { NostalgiaPage } from "./components/NostalgiaPage";
+import { FormatPage } from "./components/FormatPage";
 
 function App() {
   return (
@@ -26,7 +28,9 @@ function App() {
       {/* Основний контент лендингу */}
       <main>
         <MainPage />
+        <NostalgiaPage />
         <ForWhoPage />
+        <FormatPage />
         <ProgramPage />
         <AuthorPage />
         <FinalCTA />
