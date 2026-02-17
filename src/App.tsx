@@ -1,16 +1,22 @@
 import React from "react";
+
 import { MainPage } from "./components/MainPage";
 import { ForWhoPage } from "./components/ForWhoPage";
 import { ProgramPage } from "./components/ProgramPage"; // Створи цей компонент, якщо ще не встиг
 import { AuthorPage } from "./components/AuthorPage";
 import "./App.scss";
 import { FinalCTA } from "./components/FinalCTS";
+import { ParallaxTank } from "./components/ParallaxTank";
 
 function App() {
   return (
     <div className="bg-black min-h-screen">
+      <ParallaxTank side="left" top="10%" speed={0.1} color="yellow" />
+      <ParallaxTank side="right" top="30%" speed={-0.15} color="red" />
+      <ParallaxTank side="left" top="55%" speed={0.2} color="green" />
+      <ParallaxTank side="right" top="80%" speed={0.05} color="blue" />
       {/* Header */}
-      <nav className="sticky top-0 z-50 bg-black/90 border-b border-zinc-800 p-4 flex justify-between items-center backdrop-blur-sm">
+      <nav className="sticky top-0 z-[300] bg-black/90 border-b border-zinc-800 p-4 flex justify-between items-center backdrop-blur-sm">
         <span className="font-pixel text-yellow-500 text-[10px] md:text-xs">BATTLE CITY JS</span>
         <button className="bg-yellow-500 text-black font-pixel text-[8px] px-4 py-2 hover:bg-white transition-colors">
           START
