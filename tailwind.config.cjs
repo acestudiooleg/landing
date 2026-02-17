@@ -1,85 +1,20 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ['class'],
-  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  darkMode: ["class"],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       colors: {
-        accent: '#9a81df',
-        violet: '#d783d8',
-        bubblegum: '#ff90a5',
-        peach: '#ffb071',
-        darkBlue: '#14083a',
-        grey: '#e0d6de',
-        pagebg: '#0c0524',
+        "tank-gray": "#636363",
+        "tank-red": "#b53120", // Колір цегли
+        "tank-yellow": "#e59a12", // Колір орла/жовтого танка
+        "tank-black": "#000000",
       },
-      spacing: {
-        0.5: '0.4rem',
-        1: '0.8rem',
-        1.5: '1.2rem',
-        2: '1.6rem',
-        2.5: '2rem',
-        3: '2.4rem',
-        3.5: '2.8rem',
-        4: '3.2rem',
-        4.5: '3.6rem',
-        5: '4rem',
-        5.5: '4.4rem',
-        6: '4.8rem',
-        6.5: '5.2rem',
-        7: '5.6rem',
-        7.5: '6rem',
-        8: '6.4rem',
-        8.5: '6.8rem',
-        9: '7.2rem',
-        9.5: '7.6rem',
-        10: '8rem',
-      },
-      fontSize: {
-        sm: '1.2rem',
-        md: '1.4rem',
-        lg: '1.6rem',
-        xl: '3.2rem',
-        1016: ['1rem', '1.6rem'],
-        1216: ['1.2rem', '1.6rem'],
-        1316: ['1.3rem', '1.6rem'],
-        1420: ['1.4rem', '2rem'],
-        1424: ['1.4rem', '2.4rem'],
-        1432: ['1.4rem', '3.2rem'],
-        1624: ['1.6rem', '2.4rem'],
-        1824: ['1.8rem', '2.4rem'],
-        2432: ['2.4rem', '3.2rem'],
-      },
-      borderColor: {
-        DEFAULT: '#E4E8F0',
-      },
-      borderRadius: {
-        sm: '0.8rem',
-        md: '1.2rem',
-        lg: '1.6rem',
-        xl: '3.2rem',
-        modal: '3rem',
-      },
-      boxShadow: {
-        modalLight: '2px 12px 30px 0px rgba(208, 215, 225, 0.50)',
-        modalDark: '2px 12px 30px 0px rgba(18, 16, 22, 0.80)',
-        leftBarLight: '2px 0px 24px 0px rgba(180, 189, 211, 0.12)',
-        leftBarDark: '2px 0px 24px 0px rgba(18, 16, 22, 0.12)',
-        expandArrowLight: '0px 2px 4px 0px rgba(180, 189, 211, 0.25)',
-        expandArrowDark: '0px 2px 4px 0px rgba(18, 16, 22)',
-      },
-
       fontFamily: {
-        sans: ['Poppins', 'sans-serif'],
-        nunito: ['Nunito Sans', 'sans-serif'],
-      },
-      screens: {
-        mini: { min: '1024px', max: '1440px' },
-      },
-      transitionProperty: {
-        spacing: 'margin, padding',
+        // Додаємо кастомну назву сімейства шрифтів
+        pixel: ['"Press Start 2P"', "system-ui", "cursive"],
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 };

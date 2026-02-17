@@ -1,13 +1,35 @@
-import './App.scss';
-import { AuthorPage } from './components/AuthorPage';
-import { MainPage } from './components/MainPage';
-import './i18n';
+import React from "react";
+import { MainPage } from "./components/MainPage";
+import { ForWhoPage } from "./components/ForWhoPage";
+import { ProgramPage } from "./components/ProgramPage"; // Створи цей компонент, якщо ще не встиг
+import { AuthorPage } from "./components/AuthorPage";
+import "./App.scss";
+import { FinalCTA } from "./components/FinalCTS";
 
 function App() {
   return (
-    <div className="flex flex-col items-center">
-      <MainPage />
-      <AuthorPage />
+    <div className="bg-black min-h-screen">
+      {/* Header */}
+      <nav className="sticky top-0 z-50 bg-black/90 border-b border-zinc-800 p-4 flex justify-between items-center backdrop-blur-sm">
+        <span className="font-pixel text-yellow-500 text-[10px] md:text-xs">BATTLE CITY JS</span>
+        <button className="bg-yellow-500 text-black font-pixel text-[8px] px-4 py-2 hover:bg-white transition-colors">
+          START
+        </button>
+      </nav>
+
+      {/* Основний контент лендингу */}
+      <main>
+        <MainPage />
+        <ForWhoPage />
+        <ProgramPage />
+        <AuthorPage />
+        <FinalCTA />
+      </main>
+
+      {/* Footer */}
+      <footer className="py-10 bg-black text-center text-gray-500 text-[10px] font-mono border-t border-zinc-900">
+        <p>© 2025 Олег Судавний. Всі права захищені.</p>
+      </footer>
     </div>
   );
 }

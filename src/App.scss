@@ -1,24 +1,3 @@
-.accent {
- background: linear-gradient(180deg, #9a81df 10%, #7456c8 100%);
-}
-.peach-gradient {
-  background: linear-gradient(180deg, #ffb071 10%, #f57e3e 100%, );
-}
-.marshmelow {
-  background: linear-gradient(135deg, #a680ff 5%, #ff85b8 45%, #ffb070 85%);
-  background-clip: text;
-}
-.bg-main {
-  background: url('./assets/images/d.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-
-.author-photo {
-  background: url('./assets/images/author.jpg');
-  background-size: cover;
-  background-position: 99% 99%;
-  background-repeat: no-repeat;
+.hello {
+  color: red;
 }

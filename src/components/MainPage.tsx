@@ -1,77 +1,69 @@
-import { Trans, useTranslation } from "react-i18next";
-import { ReactComponent as GiftIcon } from "../assets/icons/gift.svg";
-
-export const MainPage = () => {
-  const { t } = useTranslation();
-  // 1999 = 100%
-  // 299 =  x
-  //  x = 299 * 100 / 1999
-  //  x = 100 - 14.96 = 85.04
+export const MainPage: React.FC = () => {
   return (
-    <div className="relative">
-      <section className="p-1">
-        <div className="text-gray-200 text-[12px] px-1">
-          <Trans
-            i18nKey="mainPage.marathon"
-            components={{
-              bold: <b />,
-            }}
-          />
+    <section className="min-h-screen flex flex-col items-center justify-center bg-black text-white p-4 relative overflow-hidden">
+      
+      {/* Кутові рамки ігрового монітора */}
+      <div className="absolute inset-4 border-2 border-zinc-900 pointer-events-none">
+        <div className="absolute top-0 left-0 w-4 h-4 border-t-4 border-l-4 border-red-600"></div>
+        <div className="absolute top-0 right-0 w-4 h-4 border-t-4 border-r-4 border-red-600"></div>
+        <div className="absolute bottom-0 left-0 w-4 h-4 border-b-4 border-l-4 border-red-600"></div>
+        <div className="absolute bottom-0 right-0 w-4 h-4 border-b-4 border-r-4 border-red-600"></div>
+      </div>
+
+      <div className="max-w-4xl w-full text-center z-10 px-6">
+        
+        {/* Статус — тепер зрозумілий для покупця */}
+        <div className="inline-block py-1 px-4 bg-zinc-900 border border-zinc-700 text-yellow-500 font-pixel text-[8px] mb-8 tracking-widest uppercase shadow-[0_0_15px_rgba(229,154,18,0.2)]">
+          STATUS: ДОСТУП ВІДКРИТО
         </div>
-        <div className="flex justify-between mx-2 items-center mt-1">
-          <div className="bg-accent px-1 py-[3px] rounded-sm w-max font-bold min-w-[140px] mr-1 text-center text-[]">
-            {t("mainPage.startDate", { date: "25 березня" })}
-          </div>
-          <div className="text-white font-semibold">{t("mainPage.places")}</div>
-        </div>
-      </section>
-      <section className="relative h-[500px]">
-        <div className="absolute w-full z-20 top-[15px] px-1 flex flex-col items-center">
-          <h1 className="text-lg font-bold text-center z-10">
-            <Trans
-              i18nKey="mainPage.offer.title"
-              components={{
-                icon: <b />,
-                text: <span className="text-transparent marshmelow" />,
-              }}
-            />
+
+        {/* Логотип Battle City + JS Course (з тінню для об'єму) */}
+        <div className="mb-6">
+          <h1 className="text-4xl md:text-7xl font-pixel text-yellow-500 leading-none uppercase drop-shadow-[4px_4px_0_rgba(153,27,27,1)]">
+            BATTLE CITY
           </h1>
-          <h2
-            style={{
-              textShadow: "1px 1px 1px rgba(0,0,0,1)",
-            }}
-            className="text-gray-200 text-[14px] font-semibold mx-2 mt-2 text-center whitespace-pre-line"
-          >
-            {t("mainPage.offer.description")}
+          <h2 className="text-xl md:text-3xl font-pixel text-white mt-2 tracking-tighter opacity-90">
+            JAVASCRIPT COURSE
           </h2>
-          <div className="text-center mt-6">
-            <strong className="text-bubblegum text-lg">{t('mainPage.price')}{' '}</strong>
-            <del className="text-white text-md">{t('mainPage.oldPrice')}</del>
-          </div>
-          <button className="peach-gradient h-4 rounded-full flex justify-between items-center pl-3 py-1 mt-1">
-            <div className="text-[16px] mr-2 font-bold">{t("mainPage.join")}</div>
-            <div className="bg-[#222] h-4 w-[52px] rounded-full text-white flex justify-center items-center font-bold">
-              -85%
+        </div>
+
+        {/* Твоя головна обіцянка — Створи танчики за 14 днів */}
+        <div className="mb-10">
+           <h3 className="font-pixel text-lg md:text-2xl text-red-600 uppercase leading-snug">
+             Створи власні «Танчики» <br/> на JS за 14 днів!
+           </h3>
+        </div>
+
+        {/* Текст про дітей 90-х (читабельний шрифт) */}
+        <div className="relative mb-12 max-w-lg mx-auto bg-zinc-900/30 p-6 border border-zinc-800">
+          <p className="text-sm md:text-base text-gray-300 leading-relaxed uppercase font-sans tracking-wide">
+            Повернися у 90-ті та навчи свою дитину програмувати. 
+            Легендарна гра на чистих технологіях — від першого пікселя до релізу.
+          </p>
+        </div>
+
+        {/* Кнопка "Розпочати місію" */}
+        <div className="flex flex-col items-center gap-10">
+          <button className="group relative">
+            <div className="absolute inset-0 bg-red-900 translate-y-1.5 translate-x-1"></div>
+            <div className="relative bg-red-600 hover:bg-red-500 text-white font-pixel text-xs md:text-sm py-5 px-10 transition-all active:translate-y-1 uppercase tracking-widest border-2 border-red-400">
+              РОЗПОЧАТИ МІСІЮ
             </div>
           </button>
-          <div className="accent h-4 rounded-full flex justify-between items-center px-2 py-1 mt-5">
-            <div>
-              <GiftIcon className="text-[26px] mr-1" />
+          
+          {/* HUD Статистика */}
+          <div className="flex justify-center gap-12 font-pixel">
+            <div className="text-left">
+              <span className="block text-[8px] text-zinc-600 mb-1 italic">TIME</span>
+              <span className="text-yellow-500 text-lg md:text-xl">14d</span>
             </div>
-            <div className="flex flex-col">
-              <Trans
-                i18nKey="mainPage.bonus"
-                components={{
-                  bold: <b className="text-[13px]" />,
-                  text: <span className="" />,
-                }}
-              />
+            <div className="text-left">
+              <span className="block text-[8px] text-zinc-600 mb-1 italic">MODE</span>
+              <span className="text-yellow-500 text-lg md:text-xl">PRO</span>
             </div>
           </div>
         </div>
-        <div className="bg-black h-[500px]  absolute top-0 w-full z-10 opacity-60"></div>
-        <div className="bg-main h-[500px] absolute w-full z-0 top-0 border-t border-b-4 border-t-[#4eff2b] border-b-darkBlue"></div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
