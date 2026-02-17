@@ -1,5 +1,3 @@
-import React from "react";
-
 import { MainPage } from "./components/MainPage";
 import { ForWhoPage } from "./components/ForWhoPage";
 import { ProgramPage } from "./components/ProgramPage"; // Створи цей компонент, якщо ще не встиг
